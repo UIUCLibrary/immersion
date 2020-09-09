@@ -26,6 +26,7 @@ class ImmersionThemePlugin extends ThemePlugin {
 		// Adding styles (JQuery UI, Bootstrap, Tag-it)
 		$this->addStyle('app-css', 'resources/dist/app.min.css');
 		$this->addStyle('less', 'resources/less/import.less');
+		$this->addStyle('ugrj', 'resources/less/ugrj.css');
 
 		// Styles for HTML galleys
 		$this->addStyle('htmlGalley', 'templates/plugins/generic/htmlArticleGalley/css/default.css', array('contexts' => 'htmlGalley'));

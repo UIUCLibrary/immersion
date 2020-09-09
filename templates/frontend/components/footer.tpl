@@ -12,28 +12,63 @@
  *       sidebars have been configured for thesite.
  *}
 
-<footer class="main-footer" id="immersion_content_footer">
-	<div class="container">
-		{if $hasSidebar}
-			<div class="sidebar_wrapper row">
-				{call_hook name="Templates::Common::Sidebar"}
-			</div>
-			<hr>
-		{/if}
-		<div class="row">
-			{if $pageFooter}
-				<div class="col-md-8">
-					{$pageFooter}
-				</div>
-			{/if}
-			<div class="col-2 col-sm-1 offset-10 offset-sm-11">
-				<a href="{url page="about" op="aboutThisPublishingSystem"}">
-					<img class="img-fluid" alt="{translate key="about.aboutThisPublishingSystem"}" src="{$baseUrl}/{$brandImage}">
-				</a>
-			</div>
-		</div>
-	</div>
+<footer class="footer-library container immersion_footer" id="immersions_content_footer">
+    <div class="row">
+        <div class="column footer-library_left" >
+            <div>Main Library Information Desk</div>
+            <div>(217) 333 -2290</div>
+            <div>1408 W. Gregory Dr.</div>
+            <div>Urbana, IL 61801</div>
+        </div>
+
+        <div class="column ">
+            <div class="footer-library_i-mark">
+                <img id="i-mark" usemap="#lib-shared-footer-wordmark-online__map__small" src="{$baseUrl}/templates/images/structure/009_LIBRA_OrangeI_Vert_RGB.png" alt="University of Illinois Library">
+
+                <map name="lib-shared-footer-wordmark-online__map__small">
+                    <area shape="rect" coords="0,0,200,40" href="https://illinois.edu" alt="Block I">
+                    <area shape="rect" coords="0,50,300,100" href="https://www.library.illinois.edu" alt="Illinois Library">
+                </map>
+
+
+            </div>
+            <div class="footer-library_copyright text-center" role="img" aria-label="Creative Commons License: BY NC 4.0">
+                <img id="cc_image" src="{$baseUrl}/templates/images/structure/cc-icons-svg/cc.svg">
+                <img id="by_image" src="{$baseUrl}/templates/images/structure/cc-icons-svg/by.svg">
+                <img id="nc_image" src="{$baseUrl}/templates/images/structure/cc-icons-svg/nc.svg">
+
+
+
+
+
+            </div>
+
+        </div>
+
+        <div class="column footer-library_right">
+            <div>
+                <ul>
+                    <li>
+                        <a href="https://www.vpaa.uillinois.edu/resources/web_privacy">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="https://guides.library.illinois.edu/usersdisabilities">Accessibility</a>
+
+                    </li>
+                    <li>
+                        <a href="https://www.library.illinois.edu/sc/">Scholarly Commons</a>
+                    </li>
+                    <li>
+                        <a href="https://www.library.illinois.edu/staff/">Library Staff Website</a>
+
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
 </footer>
+
 
 {* Login modal *}
 {if $requestedOp|escape != "register"}
