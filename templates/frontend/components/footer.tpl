@@ -9,32 +9,80 @@
  *
  * @uses $isFullWidth bool Should this page be displayed without sidebars? This
  *       represents a page-level override, and doesn't indicate whether or not
- *       sidebars have been configured for the site.
+ *       sidebars have been configured for thesite.
  *}
-
+{if $hasSidebar}
 <footer class="main-footer" id="immersion_content_footer">
-	<div class="container">
-		{if $hasSidebar}
-			<div class="sidebar_wrapper row" role="complementary">
-				{call_hook name="Templates::Common::Sidebar"}
-			</div>
-			<hr>
-		{/if}
-		<div class="row">
-			{if $pageFooter}
-				<div class="col-md-8">
-					{$pageFooter}
-				</div>
-			{/if}
-			<div class="col-2 col-sm-1 offset-10 offset-sm-11" role="complementary">
-				<a href="{url page="about" op="aboutThisPublishingSystem"}">
-					<img class="img-fluid" alt="{translate key="about.aboutThisPublishingSystem"}" src="{$baseUrl}/{$brandImage}">
-				</a>
-			</div>
-		</div>
-	</div>
+        <div class="container">
+                        <div class="sidebar_wrapper row">
+                                {call_hook name="Templates::Common::Sidebar"}
+                        </div>                          
+                        <hr>                                    
+                <div class="row">                                       
+                        {if $pageFooter}
+                                <div class="col-md-8">
+                                        {$pageFooter}
+                                </div>
+                        {/if}
+                </div>
+        </div>
 </footer>
+{/if}
 
+<footer class="footer-library" role="contentinfo">
+
+
+                                <div class="row">
+                                                        <div class="column footer-library_right" style="text: white">
+                                                                <p>ABOUT</p>
+                                                                <nav>
+                                                                        <ul>
+                                                                                <li><a href="https://iopn.library.illinois.edu/iopn-mission/">About IOPN</a></li>
+                                                                                <li><a href="https://iopn.library.illinois.edu/advisory-board/">Advisory Board</a></li>
+                                                                                <li><a href="https://iopn.library.illinois.edu/policies/">Policies</a></li>
+                                                                                <li><a href="https://iopn.library.illinois.edu/news/">IOPN News</a></li>
+                                                                                <li><a href="https://iopn.library.illinois.edu/contact/">Contact</a></li>
+                                                                                <li><a href="https://iopn.library.illinois.edu/policies/#accessibility">Accessibility</a></li>
+                                                                        </ul>
+                                                                </nav>
+
+                                                        </div>
+                                                        <div class="column footer-library_right">
+                                                                <p>PUBLISHING WITHOUT WALLS</p><p>
+                                                                </p><nav>
+                                                                        <ul>
+                                                                                <li><a href="https://iopn.library.illinois.edu/publishing-without-walls/">About PWW</a></li>
+                                                                                <li><a href="https://iopn.library.illinois.edu/books/pww/catalog">PWW Catalog</a></li>
+                                                                                <li><a href="https://pww.afro.illinois.edu">AFRO-PWW Project</a></li>
+
+                                                                        </ul>
+                                                                </nav>
+
+
+                                                        </div>
+                                                        <div class="column footer-library_right">
+                                                                <p>WINDSOR &amp; DOWNS</p>
+                                                                <nav>
+                                                                        <ul>
+                                                                                <li><a href="https://iopn.library.illinois.edu/windsor-downs-press/">About Windsor and Downs</a></li>
+                                                                                <li><a href="https://iopn.library.illinois.edu/books/windsor-downs/catalog">Windsor and Downs Catalog</a></li>
+                                                                        </ul>
+                                                                </nav>
+
+
+                                                        </div>
+
+                                                        <div class="column footer-library_right">
+                                                                <p>IOPN JOURNALS</p>
+                                                                <nav>
+                                                                        <ul>
+                                                                                <li><a href="https://iopn.library.illinois.edu/iopn-journals/">About IOPN Journals</a></li>
+                                                                                <li><a href="https://iopn.library.illinois.edu/journals/">IOPN Journals Catalog</a></li>
+                                                                        </ul>
+                                                                </nav>
+                                                        </div>
+                                </div>
+                        </footer>
 {* Login modal *}
 {if $requestedOp|escape != "register"}
 	<div id="loginModal" class="modal fade" tabindex="-1" role="dialog">

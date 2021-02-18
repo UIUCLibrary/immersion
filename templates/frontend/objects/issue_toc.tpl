@@ -24,7 +24,7 @@
 			<p class="issue__meta">{translate key="journal.currentIssue"}</p>
 		{/if}
 		{strip}
-		{capture name="issueMetadata"}
+		<h{if $requestedOp === "issue"}1{else}2{/if} class="issue__title">
 			{if $issue->getShowVolume() || $issue->getShowNumber()}
 				{if $issue->getShowVolume()}
 					<span class="issue__volume">{translate key="issue.volume"} {$issue->getVolume()|escape}{if $issue->getShowNumber()}, {/if}</span>
@@ -36,22 +36,8 @@
 			{if $issue->getShowTitle()}
 				<span class="issue__localized_name">{$issue->getLocalizedTitle()|escape}</span>
 			{/if}
-		{/capture}
-
-		{if $requestedPage === "issue" && $smarty.capture.issueMetadata|trim !== ""}
-			<h1 class="issue__title">
-				{$smarty.capture.issueMetadata}
-			</h1>
-		{elseif $smarty.capture.issueMetadata|trim !== ""}
-			<h2 class="issue__title">
-            	{$smarty.capture.issueMetadata}
-			</h2>
-		{/if}
-
-		{if $issue->getDatePublished()}
-			<p class="issue__meta">{translate key="plugins.themes.immersion.issue.published"} {$issue->getDatePublished()|date_format:$dateFormatLong}</p>
-		{/if}
-		{/strip}
+		</h1>
+			{/strip}
 	</header>
 
 	{if $issue->getLocalizedDescription() || $issueGalleys}
@@ -123,7 +109,7 @@
 						<ol class="issue-section__toc">
 							{foreach from=$section.articles item=article key=articleNumber}
 								<li class="issue-section__toc-item">
-									{include file="frontend/objects/article_summary.tpl"}
+									{include file="frontend/objects/article_summary.tpl" articleNumber=$articleNumber}
 								</li>
 							{/foreach}
 						</ol>
