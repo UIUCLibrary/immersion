@@ -37,9 +37,6 @@
 				<span class="issue__localized_name">{$issue->getLocalizedTitle()|escape}</span>
 			{/if}
 		</h1>
-			{if $issue->getDatePublished()}
-				<p class="issue__meta">{translate key="plugins.themes.immersion.issue.published"} {$issue->getDatePublished()|date_format:$dateFormatLong}</p>
-			{/if}
 			{/strip}
 	</header>
 
@@ -47,7 +44,7 @@
 		<section class="row issue-desc">
 			{assign var=issueCover value=$issue->getLocalizedCoverImageUrl()}
 			{if $issueCover}
-				<a class="col-md-2" href="{url op="view" path=$issue->getBestIssueId()}">
+				<a class="col-md-2" href="{url op="view" page="issue" path=$issue->getBestIssueId()}">
 					<img src="{$issueCover|escape}"{if $issue->getLocalizedCoverImageAltText() != ''} alt="{$issue->getLocalizedCoverImageAltText()|escape}"{/if} class="img-fluid">
 				</a>
 			{/if}

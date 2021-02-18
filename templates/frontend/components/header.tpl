@@ -34,7 +34,16 @@
 	<a class="sr-only" href="#immersion_content_main">{translate key="navigation.skip.main"}</a>
 	<a class="sr-only" href="#immersion_content_footer">{translate key="navigation.skip.footer"}</a>
 </div>
-
+<div class="iopn_header_common iopn_header_omp">
+	<img usemap="#lib-shared-header-wordmark-online__map__small" src="https://iopn.library.illinois.edu/journals/templates/images/structure/library">
+		<map name="lib-shared-header-wordmark-online__map__small">
+			<area shape="rect" coords="0,0,15,20" href="https://illinois.edu" alt="Block I">
+            <area shape="rect" coords="25,0,200,20" href="https://www.library.illinois.edu" alt="Illinois Library">
+		</map>
+	<a id="iopn_mark" href="https://iopn.library.illinois.edu">
+		<img src="https://iopn.library.illinois.edu/journals/templates/images/structure/iopn" alt="Illinois Open Publishing Network">
+	</a>
+</div>
 <header class="main-header"
         id="immersion_content_header"{if $immersionHomepageImage} style="background-image: url('{$publicFilesDir}/{$immersionHomepageImage.uploadName|escape:"url"}')"{/if}>
 	<div class="container-fluid">

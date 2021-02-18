@@ -1,0 +1,8 @@
+msgid "plugins.themes.immersion.issue.published"
+msgstr "опубликован"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "Oписание выпуска"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "Смотреть текущий выпуск"
