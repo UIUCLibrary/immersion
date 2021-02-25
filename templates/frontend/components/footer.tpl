@@ -28,61 +28,63 @@
         </div>
 </footer>
 {/if}
+<footer class="footer-library container immersion_footer" id="immersions_content_footer">
+    <div class="row">
+        <div class="column footer-library_left" >
+            <div>Main Library Information Desk</div>
+            <div>(217) 333 -2290</div>
+            <div>1408 W. Gregory Dr.</div>
+            <div>Urbana, IL 61801</div>
+        </div>
 
-<footer class="footer-library" role="contentinfo">
+        <div class="column ">
+            <div class="footer-library_i-mark">
+                <img id="i-mark" usemap="#lib-shared-footer-wordmark-online__map__small" src="{$baseUrl}/templates/images/structure/009_LIBRA_OrangeI_Vert_RGB.png" alt="University of Illinois Library">
 
-
-                                <div class="row">
-                                                        <div class="column footer-library_right" style="text: white">
-                                                                <p>ABOUT</p>
-                                                                <nav>
-                                                                        <ul>
-                                                                                <li><a href="https://iopn.library.illinois.edu/iopn-mission/">About IOPN</a></li>
-                                                                                <li><a href="https://iopn.library.illinois.edu/advisory-board/">Advisory Board</a></li>
-                                                                                <li><a href="https://iopn.library.illinois.edu/policies/">Policies</a></li>
-                                                                                <li><a href="https://iopn.library.illinois.edu/news/">IOPN News</a></li>
-                                                                                <li><a href="https://iopn.library.illinois.edu/contact/">Contact</a></li>
-                                                                                <li><a href="https://iopn.library.illinois.edu/policies/#accessibility">Accessibility</a></li>
-                                                                        </ul>
-                                                                </nav>
-
-                                                        </div>
-                                                        <div class="column footer-library_right">
-                                                                <p>PUBLISHING WITHOUT WALLS</p><p>
-                                                                </p><nav>
-                                                                        <ul>
-                                                                                <li><a href="https://iopn.library.illinois.edu/publishing-without-walls/">About PWW</a></li>
-                                                                                <li><a href="https://iopn.library.illinois.edu/books/pww/catalog">PWW Catalog</a></li>
-                                                                                <li><a href="https://pww.afro.illinois.edu">AFRO-PWW Project</a></li>
-
-                                                                        </ul>
-                                                                </nav>
+                <map name="lib-shared-footer-wordmark-online__map__small">
+                    <area shape="rect" coords="0,0,200,40" href="https://illinois.edu" alt="Block I">
+                    <area shape="rect" coords="0,50,300,100" href="https://www.library.illinois.edu" alt="Illinois Library">
+                </map>
 
 
-                                                        </div>
-                                                        <div class="column footer-library_right">
-                                                                <p>WINDSOR &amp; DOWNS</p>
-                                                                <nav>
-                                                                        <ul>
-                                                                                <li><a href="https://iopn.library.illinois.edu/windsor-downs-press/">About Windsor and Downs</a></li>
-                                                                                <li><a href="https://iopn.library.illinois.edu/books/windsor-downs/catalog">Windsor and Downs Catalog</a></li>
-                                                                        </ul>
-                                                                </nav>
+            </div>
+            <div class="footer-library_copyright text-center" role="img" aria-label="Creative Commons License: BY NC 4.0">
+                <img id="cc_image" src="{$baseUrl}/templates/images/structure/cc-icons-svg/cc.svg">
+                <img id="by_image" src="{$baseUrl}/templates/images/structure/cc-icons-svg/by.svg">
+                <img id="nc_image" src="{$baseUrl}/templates/images/structure/cc-icons-svg/nc.svg">
 
 
-                                                        </div>
 
-                                                        <div class="column footer-library_right">
-                                                                <p>IOPN JOURNALS</p>
-                                                                <nav>
-                                                                        <ul>
-                                                                                <li><a href="https://iopn.library.illinois.edu/iopn-journals/">About IOPN Journals</a></li>
-                                                                                <li><a href="https://iopn.library.illinois.edu/journals/">IOPN Journals Catalog</a></li>
-                                                                        </ul>
-                                                                </nav>
-                                                        </div>
-                                </div>
-                        </footer>
+
+
+            </div>
+
+        </div>
+
+        <div class="column footer-library_right">
+            <div>
+                <ul>
+                    <li>
+                        <a href="https://www.vpaa.uillinois.edu/resources/web_privacy">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="https://guides.library.illinois.edu/usersdisabilities">Accessibility</a>
+
+                    </li>
+                    <li>
+                        <a href="https://www.library.illinois.edu/sc/">Scholarly Commons</a>
+                    </li>
+                    <li>
+                        <a href="https://www.library.illinois.edu/staff/">Library Staff Website</a>
+
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+</footer>
+
 {* Login modal *}
 {if $requestedOp|escape != "register"}
 	<div id="loginModal" class="modal fade" tabindex="-1" role="dialog">
