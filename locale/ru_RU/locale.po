@@ -61,7 +61,7 @@ msgid "plugins.themes.immersion.search.parameters"
 msgstr "Параметры"
 
 msgid "plugins.themes.immersion.issue.fullIssueLink"
-msgstr "Посмотреть полный выпуск"
+msgstr "Смотреть текущий выпуск"
 
 msgid "plugins.themes.immersion.about.journal"
 msgstr "О журнале"
@@ -79,7 +79,7 @@ msgid "plugins.themes.immersion.registration.consent"
 msgstr "Согласие"
 
 msgid "plugins.themes.immersion.issue.description"
-msgstr "Описание выпуска"
+msgstr "Oписание выпуска"
 
 msgid "plugins.themes.immersion.issue.published"
 msgstr "Опубликован"

@@ -229,14 +229,6 @@
 					</dd>
 				{/if}
 			{/foreach}
-			{if $article->getDateSubmitted()}
-				<dt>
-					{translate key="submissions.submitted"}
-				</dt>
-				<dd>
-					{$article->getDateSubmitted()|escape|date_format:$dateFormatLong}
-				</dd>
-			{/if}
 
 			{if $publication->getData('datePublished')}
 				<dt>
